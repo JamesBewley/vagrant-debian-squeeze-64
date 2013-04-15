@@ -1,19 +1,36 @@
-## About
+# Vagrant Base Box Builder (for Debian Squeeze)
 
-This script has been ported to Ubuntu 12.04. It will: 
+This is a small script to automatically build a vagrant base box form the latest Stable Debian release.  The result is a lightweight debian installation containing the latest security updates which can be used as a base for your projects.
 
- 1. download the Ubuntu 12.04 alternate server (torrent), 64bit iso
- 2. ... do some magic to turn it into a vagrant box file
- 3. output package.box 
+When run it will do the following things for you:
+
+1. Download the latest debian distribution from http://cdimage.debian.org/
+2. Repack the ISO to configure an unattended install.
+3. Create a VirtualBox VM and install debian.
+4. Create a vagrant base box (output to debian.box).
+
+## Dependancies
+ 
+
 
 ## Usage
 
-    $ sudo ./build.sh
+    $ ./build.sh
 
 This should do everything you need. If you don't have you must 
 have `transmission-cli` installed `sudo apt-get install transmission-cli`
 if not. Likewise, `file-roller` (which should be installed by default with
 Ubuntu-Desktop, otherwise `sudo apt-get install file-roller` then:
+
+### James' notes
+
+Decided I want to create my own vagrant base box from the latest release.
+
+Let's automatically build the latest stable debian server, I said.
+
+Oh look, someone's done it for Ubuntu, I said.
+
+Let's port that to debian, I said.
 
 ### Kev's notes
 
