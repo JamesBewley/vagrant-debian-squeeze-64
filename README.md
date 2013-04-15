@@ -10,8 +10,10 @@ When run it will do the following things for you:
 4. Create a vagrant base box (output to debian.box).
 
 ## Dependancies
- 
 
+ - vagrant
+ - genisoimage
+ - curl
 
 ## Usage
 
