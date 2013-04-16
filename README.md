@@ -7,7 +7,7 @@ When run it will do the following things for you:
 1. Download the latest debian distribution from http://cdimage.debian.org/
 2. Repack the ISO to configure an unattended install.
 3. Create a VirtualBox VM and install debian.
-4. Create a vagrant base box (output to debian.box).
+4. Create a vagrant base box (output to debian-squeeze-64.box).
 
 ## Dependancies
 
