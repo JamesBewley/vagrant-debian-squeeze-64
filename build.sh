@@ -5,7 +5,10 @@ hash genisoimage 2>/dev/null || { echo >&2 "ERROR: genisoimage not found.  Abort
 hash vagrant 2>/dev/null || { echo >&2 "ERROR: vagrant not found. Make sure its in your PATH. Aborting."; exit 1; }
 hash curl 2>/dev/null || { echo >&2 "ERROR: curl not found. Install it by typing 'sudo apt-get install transmission-cli'. Aborting."; exit 1; }
 lsmod | grep vboxdrv 1>&2 >/dev/null
-[$? -ne 0] && echo >&2 "ERROR: kernel module not loaded (vboxdrv). Aborting."; exit 1;
+if [ $? == 1 ]; then 
+  echo >&2 "ERROR: kernel module not loaded (vboxdrv). Aborting."
+  exit 1
+fi
 
 set -o nounset
 set -o errexit
