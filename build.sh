@@ -199,7 +199,7 @@ if ! VBoxManage showvminfo "${BOX}" >/dev/null 2>/dev/null; then
 fi
 
 echo "Building Vagrant Box ..."
-vagrant package --base "${BOX}"
+vagrant package --base "${BOX}" --output "debian-squeeze-64.box"
 
 # references:
 # http://blog.ericwhite.ca/articles/2009/11/unattended-debian-lenny-install/
